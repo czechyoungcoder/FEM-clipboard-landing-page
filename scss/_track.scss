@@ -1,0 +1,38 @@
+.track {
+
+  &__heading {
+
+  }
+
+  &__content {
+
+    @include breakpoint-up(large) {
+      display: flex;
+      transform: translateX(-10%);
+      text-align: left;
+    }
+  }
+
+  &__image {
+    padding: 3rem 0;
+
+    @include breakpoint-up(large) {
+      margin-right: 11rem;
+      flex: 2;
+    }
+  }
+
+  &__features {
+    margin-top: 3rem;
+    
+    @include breakpoint-up(large) {
+      margin-right: 11rem;
+      margin-top: 7rem;
+      flex: 1;
+    }
+  }
+
+  &__feature {
+
+  }
+}

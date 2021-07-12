@@ -1,0 +1,49 @@
+.hero {
+  position: relative;
+  padding-top: 2rem;
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url('/images/bg-header-mobile.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint-up(large) {
+      background-image: url('/images/bg-header-desktop.png');
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(to bottom, transparent 50%, $white 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include breakpoint-up(large) {
+      background-image: url('/images/bg-header-desktop.png');
+      background-image: linear-gradient(to bottom, transparent 10%, $white 55%);
+    }
+  }
+
+  &__logo {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+}
+
+  

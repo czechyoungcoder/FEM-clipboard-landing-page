@@ -1,0 +1,15 @@
+.brands {
+  @include breakpoint-up(large) {
+    display: flex;
+  }
+
+  &__item {
+    display: block;
+    margin: auto;
+    padding-bottom: 8rem;
+
+    @include breakpoint-up(large) {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.access {
+  &__text {
+    margin-bottom: 5rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 15rem;
+    }
+  }
+
+  &__image {
+    @include breakpoint-up(large) {
+      transform: scale(1.25);
+    }
+  }
+}

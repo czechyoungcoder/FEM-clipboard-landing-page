@@ -1,0 +1,84 @@
+.footer {
+  background: $lightGray;
+  color: $darkGrayishBlue;
+  padding: 3rem;
+  margin-top: 5rem;
+
+  .container {
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: 
+              "logo link-group-1 link-group-2 link-group-3 . socials"
+              "logo link-group-1 link-group-2 link-group-3 . socials";
+    }
+    align-items: center;
+    align-content: center;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: auto;
+    margin-bottom: 4rem;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+
+  &__link-group--1 {
+    grid-area: link-group-1;
+  }
+  &__link-group--2 {
+    grid-area: link-group-2;
+  }
+  &__link-group--3 {
+    grid-area: link-group-3;
+    align-self: flex-start;
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+    margin: 2rem 0;
+    
+    &:hover {
+      color: $strongCyan; 
+    }
+  }
+
+  &__link:first-child {
+    @include breakpoint-up(large) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    margin: 0 1.25rem;
+    height: 24px;
+    width: 24px;
+
+    svg path {
+      transition: fill 200ms ease-in-out;
+    }
+
+    &:hover svg path {
+      fill: $strongCyan;
+    }
+  }
+}
